@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# Input and Output (keep the directories, ignore their contents)
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep
+
+# Cache
+.ct-controls-cache.json
+cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Specs
+.kiro

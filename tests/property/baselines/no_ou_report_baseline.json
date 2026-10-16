@@ -1,0 +1,1219 @@
+{
+  "metadata": {
+    "feature": "ou-id-parameter-case-fix",
+    "property": "4 - Preservation: No OU Supplied Is Byte-Identical",
+    "recorded_against": "UNFIXED src/control_tower_controls_generator/enabled_controls_retriever.py",
+    "python": "3.13.3",
+    "python_executable_platform": "win32",
+    "hypothesis": "6.155.0",
+    "click": "8.4.1",
+    "hypothesis_settings": {
+      "max_examples": 100,
+      "derandomize": true,
+      "database": null
+    },
+    "record_command": "OU_FIX_RECORD_BASELINE=1 python -m pytest tests/property/test_ou_fix_preservation_props.py -v"
+  },
+  "no_ou_reports": {
+    "{\"behavior_filter\":\"DETECTIVE\",\"framework\":\"NIST-SP-800-53-r5\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\",\"AWS::S3::Bucket\",\"AWS::Lambda::Function\",\"AWS::EC2::SecurityGroup\",\"AWS::RDS::DBInstance\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 149,
+      "sha256": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "sha256_normalized": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No matching controls found\"\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"DETECTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::Lambda::Function\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 149,
+      "sha256": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "sha256_normalized": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No matching controls found\"\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"DETECTIVE,PROACTIVE,PREVENTIVE\",\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::DynamoDB::Table\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 149,
+      "sha256": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "sha256_normalized": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No matching controls found\"\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE\",\"framework\":\"Not-A-Framework-v9\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::KMS::Key\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"LOW,MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 167,
+      "sha256": "e25f29dafea48af0447100f8fed53327d1f6aa3daae218da73d34e11c764310d",
+      "sha256_normalized": "e25f29dafea48af0447100f8fed53327d1f6aa3daae218da73d34e11c764310d",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No controls matched the requested frameworks\"\n}",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE\",\"framework\":\"PCI-DSS-v4.0\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::IAM::Role\",\"AWS::RDS::DBInstance\",\"AWS::Lambda::Function\",\"AWS::S3::Bucket\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 648,
+      "sha256": "3e446ff269c26753bac8707851ed98e1db9f93cbbf839dd018cb023a7ff998d2",
+      "sha256_normalized": "3e446ff269c26753bac8707851ed98e1db9f93cbbf839dd018cb023a7ff998d2",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"8.3.1\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE\",\"framework\":\"PCI-DSS-v4.0\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::S3::Bucket\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 651,
+      "sha256": "d2830a70d994b735700640673b414fa0fad774b2ab26c980be8f0e24cb56a7a8",
+      "sha256_normalized": "d2830a70d994b735700640673b414fa0fad774b2ab26c980be8f0e24cb56a7a8",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 2\n- **Already Enabled**: 0\n- **Gaps**: 2\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status | Frameworks |\n|---|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::SecurityGroup | 111111111111 | not enabled | PCI-DSS-v4.0: 1.2.3 |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role, AWS::S3::Bucket | 111111111111, 333333333333 | not enabled | PCI-DSS-v4.0: 8.3.1 |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE\",\"framework\":\"PCI-DSS-v4.0\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::KMS::Key\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"LOW,MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 149,
+      "sha256": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "sha256_normalized": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No matching controls found\"\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::Lambda::Function\"],\"severity_filter\":\"MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 509,
+      "sha256": "3b2399e5981a6b2ebef7870c5639cb84eeb6a64e61199a489cc085df448e6707",
+      "sha256_normalized": "3b2399e5981a6b2ebef7870c5639cb84eeb6a64e61199a489cc085df448e6707",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::Lambda::Function\",\"AWS::RDS::DBInstance\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::S3::Bucket\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 1311,
+      "sha256": "f5269cee31e4e96d96db84e1a7ce947a0a4f8ea90f33fc6ee9eee9324aaac56c",
+      "sha256_normalized": "f5269cee31e4e96d96db84e1a7ce947a0a4f8ea90f33fc6ee9eee9324aaac56c",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 3,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 3\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::Lambda::Function\",\"AWS::RDS::DBInstance\",\"AWS::KMS::Key\",\"AWS::IAM::Role\",\"AWS::DynamoDB::Table\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::S3::Bucket\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 1311,
+      "sha256": "f5269cee31e4e96d96db84e1a7ce947a0a4f8ea90f33fc6ee9eee9324aaac56c",
+      "sha256_normalized": "f5269cee31e4e96d96db84e1a7ce947a0a4f8ea90f33fc6ee9eee9324aaac56c",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 3,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 3\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::Lambda::Function\",\"AWS::S3::Bucket\",\"AWS::KMS::Key\",\"AWS::IAM::Role\",\"AWS::DynamoDB::Table\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::RDS::DBInstance\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 1311,
+      "sha256": "f5269cee31e4e96d96db84e1a7ce947a0a4f8ea90f33fc6ee9eee9324aaac56c",
+      "sha256_normalized": "f5269cee31e4e96d96db84e1a7ce947a0a4f8ea90f33fc6ee9eee9324aaac56c",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 3,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 3\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE\",\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::RDS::DBInstance\"],\"severity_filter\":\"HIGH,LOW,CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 389,
+      "sha256": "75987944f6fc0cb5bdf547a8445312bcb8abd2bea5d8ae6a9d91e78e147fd370",
+      "sha256_normalized": "75987944f6fc0cb5bdf547a8445312bcb8abd2bea5d8ae6a9d91e78e147fd370",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 1\n- **Already Enabled**: 0\n- **Gaps**: 1\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Delta Encrypt RDS Storage | arn:aws:controlcatalog:::control/ct-fixture-0004 | PREVENTIVE | HIGH | AWS::RDS::DBInstance | N/A | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE\",\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::RDS::DBInstance\"],\"severity_filter\":\"HIGH,MEDIUM,CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 389,
+      "sha256": "75987944f6fc0cb5bdf547a8445312bcb8abd2bea5d8ae6a9d91e78e147fd370",
+      "sha256_normalized": "75987944f6fc0cb5bdf547a8445312bcb8abd2bea5d8ae6a9d91e78e147fd370",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 1\n- **Already Enabled**: 0\n- **Gaps**: 1\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Delta Encrypt RDS Storage | arn:aws:controlcatalog:::control/ct-fixture-0004 | PREVENTIVE | HIGH | AWS::RDS::DBInstance | N/A | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE\",\"framework\":\"PCI-DSS-v4.0\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::KMS::Key\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"LOW,MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 149,
+      "sha256": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "sha256_normalized": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No matching controls found\"\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE\",\"framework\":\"PCI-DSS-v4.0,NIST-SP-800-53-r5\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::KMS::Key\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"LOW,MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 561,
+      "sha256": "038b530610f02e59c5b11c0b6bbc6e44a938e87459cce9eaa9711cd643e19c69",
+      "sha256_normalized": "038b530610f02e59c5b11c0b6bbc6e44a938e87459cce9eaa9711cd643e19c69",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"SC-12\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE\",\"framework\":\"PCI-DSS-v4.0,Not-A-Framework-v9\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::S3::Bucket\",\"AWS::Lambda::Function\",\"AWS::RDS::DBInstance\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\"],\"severity_filter\":\"HIGH,CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 1642,
+      "sha256": "6bbf17e65404f0b267bdf4430c6b05375a3a47699dded619e061d294261c6198",
+      "sha256_normalized": "6bbf17e65404f0b267bdf4430c6b05375a3a47699dded619e061d294261c6198",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 3,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 3\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"1.2.3\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"3.4.1\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"8.3.1\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::DynamoDB::Table\",\"AWS::KMS::Key\",\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::RDS::DBInstance\",\"AWS::EC2::SecurityGroup\",\"AWS::S3::Bucket\"],\"severity_filter\":\"MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 1958,
+      "sha256": "2b9c4190674ac3479198d83a9dce5702cf00b5b84909ce631b9cb3eb7de04265",
+      "sha256_normalized": "2b9c4190674ac3479198d83a9dce5702cf00b5b84909ce631b9cb3eb7de04265",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 5,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 5\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": [\n        \"666666666666\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::IAM::Role\",\"AWS::RDS::DBInstance\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 903,
+      "sha256": "1d943062a8b8d74e612d73b860c18478526acaf397763213319c595b5a5bb818",
+      "sha256_normalized": "1d943062a8b8d74e612d73b860c18478526acaf397763213319c595b5a5bb818",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 2,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 2\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": [\n        \"111111111111\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::IAM::Role\",\"AWS::RDS::DBInstance\",\"AWS::Lambda::Function\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 868,
+      "sha256": "96beb7968d0202443a38b285889d633b5f1261207a58b480a4e4cef6734aa14c",
+      "sha256_normalized": "96beb7968d0202443a38b285889d633b5f1261207a58b480a4e4cef6734aa14c",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 2,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 2\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": [\n        \"111111111111\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::IAM::Role\",\"AWS::RDS::DBInstance\",\"AWS::Lambda::Function\",\"AWS::S3::Bucket\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 537,
+      "sha256": "fb24bcd87e7b54a87738bd94d4c22ddbe80728fa19778254ce64e55dd121e985",
+      "sha256_normalized": "fb24bcd87e7b54a87738bd94d4c22ddbe80728fa19778254ce64e55dd121e985",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::S3::Bucket\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 906,
+      "sha256": "041189823db95ef41d5087680f3a1a21b0b2ec39ab9f9f113634e252da656d22",
+      "sha256_normalized": "041189823db95ef41d5087680f3a1a21b0b2ec39ab9f9f113634e252da656d22",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 4\n- **Already Enabled**: 0\n- **Gaps**: 4\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance | 111111111111, 222222222222 | not enabled |\n| Beta Detect Public S3 Buckets | arn:aws:controlcatalog:::control/ct-fixture-0002 | DETECTIVE | HIGH | AWS::S3::Bucket | 333333333333 | not enabled |\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | 111111111111 | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role, AWS::S3::Bucket | 111111111111, 333333333333 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::S3::Bucket\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 897,
+      "sha256": "d0265fd41a17afa1300a9dcd137684e26c40498cd91c7ba6979b89c5e86e822e",
+      "sha256_normalized": "d0265fd41a17afa1300a9dcd137684e26c40498cd91c7ba6979b89c5e86e822e",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 4\n- **Already Enabled**: 0\n- **Gaps**: 4\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::SecurityGroup | 111111111111 | not enabled |\n| Beta Detect Public S3 Buckets | arn:aws:controlcatalog:::control/ct-fixture-0002 | DETECTIVE | HIGH | AWS::S3::Bucket | 333333333333 | not enabled |\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | 111111111111 | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role, AWS::S3::Bucket | 111111111111, 333333333333 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE,PROACTIVE\",\"framework\":\"NIST-SP-800-53-r5\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\",\"AWS::S3::Bucket\",\"AWS::Lambda::Function\",\"AWS::EC2::Instance\",\"AWS::RDS::DBInstance\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 572,
+      "sha256": "0f1cf7782643ed734133a7c39ed4b8deb0ab9ae8d2e84296b38f4dbbcae75c10",
+      "sha256_normalized": "0f1cf7782643ed734133a7c39ed4b8deb0ab9ae8d2e84296b38f4dbbcae75c10",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"AC-2\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE,PROACTIVE\",\"framework\":\"NIST-SP-800-53-r5\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\",\"AWS::S3::Bucket\",\"AWS::Lambda::Function\",\"AWS::EC2::SecurityGroup\",\"AWS::RDS::DBInstance\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 577,
+      "sha256": "0fad308fd8f1bee0a178273d1fc596eb63f33e315e1c0b104d455d5244a4b8f6",
+      "sha256_normalized": "0fad308fd8f1bee0a178273d1fc596eb63f33e315e1c0b104d455d5244a4b8f6",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"AC-2\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE,PROACTIVE\",\"framework\":\"NIST-SP-800-53-r5,Not-A-Framework-v9,PCI-DSS-v4.0\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::IAM::Role\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 569,
+      "sha256": "cf69ad7f88854231cbb7a48dfd79f9c20583eaa6af8477024ddb0f07ed2d44c4",
+      "sha256_normalized": "cf69ad7f88854231cbb7a48dfd79f9c20583eaa6af8477024ddb0f07ed2d44c4",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"8.3.1\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE,PROACTIVE\",\"framework\":\"PCI-DSS-v4.0,NIST-SP-800-53-r5,CIS-AWS-Benchmark-v1.4.0\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::S3::Bucket\",\"AWS::RDS::DBInstance\",\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::EC2::Instance\",\"AWS::DynamoDB::Table\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 3327,
+      "sha256": "a65c9ee92c22079771699f5791feb96119040c0ec232e2441dd047fc75fe4ec9",
+      "sha256_normalized": "a65c9ee92c22079771699f5791feb96119040c0ec232e2441dd047fc75fe4ec9",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 6,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 6\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"1.2.3\"\n        },\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"AC-2\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"3.4.1\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"CIS-AWS-Benchmark-v1.4.0\",\n          \"item\": \"2.3.1\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"8.3.1\"\n        },\n        {\n          \"name\": \"CIS-AWS-Benchmark-v1.4.0\",\n          \"item\": \"1.7\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\",\n        \"444444444444\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"SC-7\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": [\n        \"666666666666\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"SC-12\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE,PROACTIVE\",\"framework\":\"PCI-DSS-v4.0,NIST-SP-800-53-r5,CIS-AWS-Benchmark-v1.4.0\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 960,
+      "sha256": "8af88b027183cabefc9e930c8994101987cd683981c88eee0f81440e327c5db9",
+      "sha256_normalized": "8af88b027183cabefc9e930c8994101987cd683981c88eee0f81440e327c5db9",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 3\n- **Already Enabled**: 0\n- **Gaps**: 3\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status | Frameworks |\n|---|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance, AWS::EC2::SecurityGroup | 111111111111, 222222222222 | not enabled | PCI-DSS-v4.0: 1.2.3<br/>NIST-SP-800-53-r5: AC-2 |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role | 111111111111 | not enabled | PCI-DSS-v4.0: 8.3.1<br/>CIS-AWS-Benchmark-v1.4.0: 1.7 |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function, AWS::EC2::SecurityGroup | 111111111111, 222222222222, 444444444444 | not enabled | NIST-SP-800-53-r5: SC-7 |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE,PROACTIVE\",\"framework\":\"PCI-DSS-v4.0,NIST-SP-800-53-r5,CIS-AWS-Benchmark-v1.4.0\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::SecurityGroup\",\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\",\"AWS::RDS::DBInstance\",\"AWS::EC2::Instance\",\"AWS::S3::Bucket\"],\"severity_filter\":\"LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 3063,
+      "sha256": "1a07c1fb4431b443486540621acb5ad7a9efbdd6dd9484ca3610fe14dff3a208",
+      "sha256_normalized": "1a07c1fb4431b443486540621acb5ad7a9efbdd6dd9484ca3610fe14dff3a208",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 6,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 6\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"1.2.3\"\n        },\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"AC-2\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"3.4.1\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"CIS-AWS-Benchmark-v1.4.0\",\n          \"item\": \"2.3.1\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"8.3.1\"\n        },\n        {\n          \"name\": \"CIS-AWS-Benchmark-v1.4.0\",\n          \"item\": \"1.7\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"SC-7\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"SC-12\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE,PROACTIVE\",\"framework\":\"PCI-DSS-v4.0,NIST-SP-800-53-r5,CIS-AWS-Benchmark-v1.4.0\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::IAM::Role\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 660,
+      "sha256": "80ff15e494457a57a64a6f6bf3f02ffc76f669e709517e465c7c0ffff3f892ee",
+      "sha256_normalized": "80ff15e494457a57a64a6f6bf3f02ffc76f669e709517e465c7c0ffff3f892ee",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"8.3.1\"\n        },\n        {\n          \"name\": \"CIS-AWS-Benchmark-v1.4.0\",\n          \"item\": \"1.7\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE,PROACTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::S3::Bucket\",\"AWS::RDS::DBInstance\",\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::EC2::Instance\",\"AWS::DynamoDB::Table\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 2824,
+      "sha256": "90ad4c4c5ee2099fb7fea6da507f1c56a4955afe94ab5a6040ca55d139c67c73",
+      "sha256_normalized": "90ad4c4c5ee2099fb7fea6da507f1c56a4955afe94ab5a6040ca55d139c67c73",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 7,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 7\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Epsilon Detect Wildcard IAM Policies\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0005\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"LOW\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": [\n        \"111111111111\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\",\n        \"444444444444\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": [\n        \"666666666666\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE,PROACTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::S3::Bucket\",\"AWS::RDS::DBInstance\",\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::DynamoDB::Table\"],\"severity_filter\":\"LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 2824,
+      "sha256": "90ad4c4c5ee2099fb7fea6da507f1c56a4955afe94ab5a6040ca55d139c67c73",
+      "sha256_normalized": "90ad4c4c5ee2099fb7fea6da507f1c56a4955afe94ab5a6040ca55d139c67c73",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 7,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 7\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Epsilon Detect Wildcard IAM Policies\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0005\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"LOW\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": [\n        \"111111111111\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\",\n        \"444444444444\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": [\n        \"666666666666\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE,PROACTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 967,
+      "sha256": "b0ce64ee48991693747c6558ed7102fd63693b70c39bee1d1d7285bc750adc94",
+      "sha256_normalized": "b0ce64ee48991693747c6558ed7102fd63693b70c39bee1d1d7285bc750adc94",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 4\n- **Already Enabled**: 0\n- **Gaps**: 4\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance, AWS::EC2::SecurityGroup | 111111111111, 222222222222 | not enabled |\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | 111111111111 | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role | 111111111111 | not enabled |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function, AWS::EC2::SecurityGroup | 111111111111, 222222222222, 444444444444 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE,PROACTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::S3::Bucket\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 1085,
+      "sha256": "7d9fd7de057c780ec2c48a7fbbffdc8c6b7f28304ee760ec5e208e6fed2c5970",
+      "sha256_normalized": "7d9fd7de057c780ec2c48a7fbbffdc8c6b7f28304ee760ec5e208e6fed2c5970",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 5\n- **Already Enabled**: 0\n- **Gaps**: 5\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance | 111111111111, 222222222222 | not enabled |\n| Beta Detect Public S3 Buckets | arn:aws:controlcatalog:::control/ct-fixture-0002 | DETECTIVE | HIGH | AWS::S3::Bucket | 333333333333 | not enabled |\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | 111111111111 | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role, AWS::S3::Bucket | 111111111111, 333333333333 | not enabled |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function | 222222222222, 444444444444 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE,PROACTIVE\",\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::SecurityGroup\",\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\",\"AWS::RDS::DBInstance\",\"AWS::EC2::Instance\",\"AWS::S3::Bucket\"],\"severity_filter\":\"LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 2532,
+      "sha256": "2337ecd562edfe2f2c641b0257bfd8391d77ee54b83b94ec01d4e846af93315e",
+      "sha256_normalized": "2337ecd562edfe2f2c641b0257bfd8391d77ee54b83b94ec01d4e846af93315e",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 7,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 7\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Epsilon Detect Wildcard IAM Policies\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0005\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"LOW\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,DETECTIVE,PROACTIVE\",\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::SecurityGroup\",\"AWS::Lambda::Function\",\"AWS::S3::Bucket\",\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\",\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::RDS::DBInstance\"],\"severity_filter\":\"LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 2532,
+      "sha256": "2337ecd562edfe2f2c641b0257bfd8391d77ee54b83b94ec01d4e846af93315e",
+      "sha256_normalized": "2337ecd562edfe2f2c641b0257bfd8391d77ee54b83b94ec01d4e846af93315e",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 7,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 7\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Epsilon Detect Wildcard IAM Policies\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0005\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"LOW\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,PROACTIVE\",\"framework\":\"Not-A-Framework-v9,PCI-DSS-v4.0,CIS-AWS-Benchmark-v1.4.0\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::SecurityGroup\",\"AWS::Lambda::Function\",\"AWS::S3::Bucket\",\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\",\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::RDS::DBInstance\"],\"severity_filter\":\"LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 1615,
+      "sha256": "c115c426ad59df83a103741e68a4577425a354d19d79eb665c33d55db5f36df4",
+      "sha256_normalized": "c115c426ad59df83a103741e68a4577425a354d19d79eb665c33d55db5f36df4",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 3,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 3\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"1.2.3\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"CIS-AWS-Benchmark-v1.4.0\",\n          \"item\": \"2.3.1\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"8.3.1\"\n        },\n        {\n          \"name\": \"CIS-AWS-Benchmark-v1.4.0\",\n          \"item\": \"1.7\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,PROACTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::DynamoDB::Table\",\"AWS::S3::Bucket\",\"AWS::EC2::SecurityGroup\",\"AWS::EC2::Instance\",\"AWS::IAM::Role\"],\"severity_filter\":\"HIGH\"}": {
+      "exit_code": 0,
+      "report_bytes": 954,
+      "sha256": "6817382dc796bf645b4073f1c6df08f021d437101594133bbcac6aaf5c223867",
+      "sha256_normalized": "6817382dc796bf645b4073f1c6df08f021d437101594133bbcac6aaf5c223867",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 2,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 2\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,PROACTIVE,DETECTIVE\",\"framework\":\"NIST-SP-800-53-r5,Not-A-Framework-v9\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::Lambda::Function\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::S3::Bucket\",\"AWS::IAM::Role\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 725,
+      "sha256": "abd99872aec12973bf78d502a2c111a04777f08b450466e28b007eff5fc2d1eb",
+      "sha256_normalized": "abd99872aec12973bf78d502a2c111a04777f08b450466e28b007eff5fc2d1eb",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 2\n- **Already Enabled**: 0\n- **Gaps**: 2\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status | Frameworks |\n|---|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance, AWS::EC2::SecurityGroup | 111111111111, 222222222222 | not enabled | NIST-SP-800-53-r5: AC-2 |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function, AWS::EC2::SecurityGroup | 111111111111, 222222222222, 444444444444 | not enabled | NIST-SP-800-53-r5: SC-7 |\n",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,PROACTIVE,DETECTIVE\",\"framework\":\"NIST-SP-800-53-r5,Not-A-Framework-v9,PCI-DSS-v4.0\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::KMS::Key\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 431,
+      "sha256": "89b458a2a962ba2e6a3219bf3ada1b62d4694190e015fa88782d7748ffc0b672",
+      "sha256_normalized": "89b458a2a962ba2e6a3219bf3ada1b62d4694190e015fa88782d7748ffc0b672",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 1\n- **Already Enabled**: 0\n- **Gaps**: 1\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status | Frameworks |\n|---|---|---|---|---|---|---|---|\n| Zeta Rotate KMS Keys | arn:aws:controlcatalog:::control/ct-fixture-0006 | DETECTIVE | MEDIUM | AWS::KMS::Key | 666666666666 | not enabled | NIST-SP-800-53-r5: SC-12 |\n",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,PROACTIVE,DETECTIVE\",\"framework\":\"PCI-DSS-v4.0,CIS-AWS-Benchmark-v1.4.0,NIST-SP-800-53-r5\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::DynamoDB::Table\",\"AWS::S3::Bucket\",\"AWS::EC2::SecurityGroup\",\"AWS::EC2::Instance\",\"AWS::IAM::Role\"],\"severity_filter\":\"HIGH\"}": {
+      "exit_code": 0,
+      "report_bytes": 1818,
+      "sha256": "d278755ace86a59c640ad09ed99eaf07c5d2a4ba3c57a9d4f5b2e2de34f86e75",
+      "sha256_normalized": "d278755ace86a59c640ad09ed99eaf07c5d2a4ba3c57a9d4f5b2e2de34f86e75",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 3,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 3\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"1.2.3\"\n        },\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"AC-2\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"3.4.1\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"8.3.1\"\n        },\n        {\n          \"name\": \"CIS-AWS-Benchmark-v1.4.0\",\n          \"item\": \"1.7\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,PROACTIVE,DETECTIVE\",\"framework\":\"PCI-DSS-v4.0,CIS-AWS-Benchmark-v1.4.0,NIST-SP-800-53-r5\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::KMS::Key\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 431,
+      "sha256": "89b458a2a962ba2e6a3219bf3ada1b62d4694190e015fa88782d7748ffc0b672",
+      "sha256_normalized": "89b458a2a962ba2e6a3219bf3ada1b62d4694190e015fa88782d7748ffc0b672",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 1\n- **Already Enabled**: 0\n- **Gaps**: 1\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status | Frameworks |\n|---|---|---|---|---|---|---|---|\n| Zeta Rotate KMS Keys | arn:aws:controlcatalog:::control/ct-fixture-0006 | DETECTIVE | MEDIUM | AWS::KMS::Key | 666666666666 | not enabled | NIST-SP-800-53-r5: SC-12 |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,PROACTIVE,DETECTIVE\",\"framework\":\"PCI-DSS-v4.0,NIST-SP-800-53-r5,CIS-AWS-Benchmark-v1.4.0\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::S3::Bucket\",\"AWS::RDS::DBInstance\",\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::EC2::Instance\",\"AWS::DynamoDB::Table\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 3327,
+      "sha256": "a65c9ee92c22079771699f5791feb96119040c0ec232e2441dd047fc75fe4ec9",
+      "sha256_normalized": "a65c9ee92c22079771699f5791feb96119040c0ec232e2441dd047fc75fe4ec9",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 6,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 6\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"1.2.3\"\n        },\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"AC-2\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"3.4.1\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"CIS-AWS-Benchmark-v1.4.0\",\n          \"item\": \"2.3.1\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"8.3.1\"\n        },\n        {\n          \"name\": \"CIS-AWS-Benchmark-v1.4.0\",\n          \"item\": \"1.7\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\",\n        \"444444444444\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"SC-7\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": [\n        \"666666666666\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"SC-12\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,PROACTIVE,DETECTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::DynamoDB::Table\",\"AWS::S3::Bucket\",\"AWS::EC2::SecurityGroup\",\"AWS::EC2::Instance\",\"AWS::IAM::Role\"],\"severity_filter\":\"HIGH\"}": {
+      "exit_code": 0,
+      "report_bytes": 1309,
+      "sha256": "39ead92d30b6560ae92d3a1ff86c72a4205530afa00ac8f659c8967ca9553e2d",
+      "sha256_normalized": "39ead92d30b6560ae92d3a1ff86c72a4205530afa00ac8f659c8967ca9553e2d",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 3,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 3\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,PROACTIVE,DETECTIVE\",\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::DynamoDB::Table\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 149,
+      "sha256": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "sha256_normalized": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No matching controls found\"\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PREVENTIVE,PROACTIVE,DETECTIVE\",\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 457,
+      "sha256": "348a0ed06613d8b636e1b6459265b2e209c5260c9d55d2096905d98317672953",
+      "sha256_normalized": "348a0ed06613d8b636e1b6459265b2e209c5260c9d55d2096905d98317672953",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PROACTIVE\",\"framework\":\"CIS-AWS-Benchmark-v1.4.0\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\",\"AWS::S3::Bucket\",\"AWS::Lambda::Function\",\"AWS::EC2::SecurityGroup\",\"AWS::RDS::DBInstance\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 149,
+      "sha256": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "sha256_normalized": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No matching controls found\"\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PROACTIVE\",\"framework\":\"CIS-AWS-Benchmark-v1.4.0\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\",\"AWS::S3::Bucket\",\"AWS::Lambda::Function\",\"AWS::EC2::SecurityGroup\",\"AWS::EC2::Instance\",\"AWS::RDS::DBInstance\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 139,
+      "sha256": "cc33d5fa664ffb17c562942e9a01353559a44346842b86398210cd6fb3c0f403",
+      "sha256_normalized": "cc33d5fa664ffb17c562942e9a01353559a44346842b86398210cd6fb3c0f403",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 0\n- **Already Enabled**: 0\n- **Gaps**: 0\n\nNo matching controls found\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PROACTIVE\",\"framework\":\"CIS-AWS-Benchmark-v1.4.0\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\",\"AWS::S3::Bucket\",\"AWS::Lambda::Function\",\"AWS::EC2::SecurityGroup\",\"AWS::RDS::DBInstance\",\"AWS::EC2::Instance\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 139,
+      "sha256": "cc33d5fa664ffb17c562942e9a01353559a44346842b86398210cd6fb3c0f403",
+      "sha256_normalized": "cc33d5fa664ffb17c562942e9a01353559a44346842b86398210cd6fb3c0f403",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 0\n- **Already Enabled**: 0\n- **Gaps**: 0\n\nNo matching controls found\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PROACTIVE\",\"framework\":\"NIST-SP-800-53-r5\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\",\"AWS::S3::Bucket\",\"AWS::Lambda::Function\",\"AWS::EC2::SecurityGroup\",\"AWS::RDS::DBInstance\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 149,
+      "sha256": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "sha256_normalized": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No matching controls found\"\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PROACTIVE\",\"framework\":\"NIST-SP-800-53-r5\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::DynamoDB::Table\",\"AWS::KMS::Key\",\"AWS::EC2::Instance\",\"AWS::S3::Bucket\",\"AWS::Lambda::Function\",\"AWS::RDS::DBInstance\",\"AWS::IAM::Role\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"HIGH,MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 469,
+      "sha256": "9cf066d1e5f0bc356d8ed5f476c4b9879d3b23af6690ddba3b6f870d676b98d7",
+      "sha256_normalized": "9cf066d1e5f0bc356d8ed5f476c4b9879d3b23af6690ddba3b6f870d676b98d7",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 1\n- **Already Enabled**: 0\n- **Gaps**: 1\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status | Frameworks |\n|---|---|---|---|---|---|---|---|\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function, AWS::EC2::SecurityGroup | N/A | not enabled | NIST-SP-800-53-r5: SC-7 |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PROACTIVE\",\"framework\":\"Not-A-Framework-v9\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::KMS::Key\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"LOW,MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 167,
+      "sha256": "e25f29dafea48af0447100f8fed53327d1f6aa3daae218da73d34e11c764310d",
+      "sha256_normalized": "e25f29dafea48af0447100f8fed53327d1f6aa3daae218da73d34e11c764310d",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No controls matched the requested frameworks\"\n}",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PROACTIVE\",\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::RDS::DBInstance\"],\"severity_filter\":\"HIGH,LOW,CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 139,
+      "sha256": "cc33d5fa664ffb17c562942e9a01353559a44346842b86398210cd6fb3c0f403",
+      "sha256_normalized": "cc33d5fa664ffb17c562942e9a01353559a44346842b86398210cd6fb3c0f403",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 0\n- **Already Enabled**: 0\n- **Gaps**: 0\n\nNo matching controls found\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PROACTIVE,DETECTIVE\",\"framework\":\"NIST-SP-800-53-r5\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::Lambda::Function\",\"AWS::DynamoDB::Table\"],\"severity_filter\":\"MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 467,
+      "sha256": "5ef4381b8a5ddefd70ee318a1a448f6f80c03e29e76948995e72137f50f2aee4",
+      "sha256_normalized": "5ef4381b8a5ddefd70ee318a1a448f6f80c03e29e76948995e72137f50f2aee4",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 1\n- **Already Enabled**: 0\n- **Gaps**: 1\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status | Frameworks |\n|---|---|---|---|---|---|---|---|\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function | 222222222222, 444444444444 | not enabled | NIST-SP-800-53-r5: SC-7 |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PROACTIVE,DETECTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::DynamoDB::Table\",\"AWS::S3::Bucket\",\"AWS::EC2::SecurityGroup\",\"AWS::EC2::Instance\",\"AWS::IAM::Role\"],\"severity_filter\":\"HIGH\"}": {
+      "exit_code": 0,
+      "report_bytes": 482,
+      "sha256": "fe4a392c27e368ab247e776b2c26ec54de2222ad8367f404140e2ea42e64f594",
+      "sha256_normalized": "fe4a392c27e368ab247e776b2c26ec54de2222ad8367f404140e2ea42e64f594",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PROACTIVE,DETECTIVE,PREVENTIVE\",\"framework\":\"PCI-DSS-v4.0\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::IAM::Role\",\"AWS::RDS::DBInstance\",\"AWS::Lambda::Function\",\"AWS::S3::Bucket\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 648,
+      "sha256": "3e446ff269c26753bac8707851ed98e1db9f93cbbf839dd018cb023a7ff998d2",
+      "sha256_normalized": "3e446ff269c26753bac8707851ed98e1db9f93cbbf839dd018cb023a7ff998d2",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"8.3.1\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":\"PROACTIVE,DETECTIVE,PREVENTIVE\",\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::EC2::SecurityGroup\",\"AWS::Lambda::Function\",\"AWS::DynamoDB::Table\",\"AWS::RDS::DBInstance\",\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::S3::Bucket\",\"AWS::KMS::Key\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 1444,
+      "sha256": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "sha256_normalized": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 7\n- **Already Enabled**: 0\n- **Gaps**: 7\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance, AWS::EC2::SecurityGroup | 111111111111, 222222222222 | not enabled |\n| Beta Detect Public S3 Buckets | arn:aws:controlcatalog:::control/ct-fixture-0002 | DETECTIVE | HIGH | AWS::S3::Bucket | 333333333333 | not enabled |\n| Delta Encrypt RDS Storage | arn:aws:controlcatalog:::control/ct-fixture-0004 | PREVENTIVE | HIGH | AWS::RDS::DBInstance | 555555555555 | not enabled |\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | 111111111111 | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role, AWS::S3::Bucket | 111111111111, 333333333333 | not enabled |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function, AWS::EC2::SecurityGroup | 111111111111, 222222222222, 444444444444 | not enabled |\n| Zeta Rotate KMS Keys | arn:aws:controlcatalog:::control/ct-fixture-0006 | DETECTIVE | MEDIUM | AWS::KMS::Key | 666666666666 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":\"CIS-AWS-Benchmark-v1.4.0\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::S3::Bucket\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 608,
+      "sha256": "87a853ed0496e150305ea87b2fb326fd2718e7acc622755c4204ca674c1c78bb",
+      "sha256_normalized": "87a853ed0496e150305ea87b2fb326fd2718e7acc622755c4204ca674c1c78bb",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"CIS-AWS-Benchmark-v1.4.0\",\n          \"item\": \"1.7\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":\"CIS-AWS-Benchmark-v1.4.0,NIST-SP-800-53-r5,Not-A-Framework-v9\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::RDS::DBInstance\"],\"severity_filter\":\"HIGH,MEDIUM,CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 440,
+      "sha256": "515d803ae75b1080c4994eb09b7c8e482edd2af29b71e370f37ee7b49a639fd5",
+      "sha256_normalized": "515d803ae75b1080c4994eb09b7c8e482edd2af29b71e370f37ee7b49a639fd5",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 1\n- **Already Enabled**: 0\n- **Gaps**: 1\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status | Frameworks |\n|---|---|---|---|---|---|---|---|\n| Delta Encrypt RDS Storage | arn:aws:controlcatalog:::control/ct-fixture-0004 | PREVENTIVE | HIGH | AWS::RDS::DBInstance | N/A | not enabled | CIS-AWS-Benchmark-v1.4.0: 2.3.1 |\n",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":\"CIS-AWS-Benchmark-v1.4.0,NIST-SP-800-53-r5,Not-A-Framework-v9\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::RDS::DBInstance\"],\"severity_filter\":\"MEDIUM,CRITICAL,HIGH\"}": {
+      "exit_code": 0,
+      "report_bytes": 440,
+      "sha256": "515d803ae75b1080c4994eb09b7c8e482edd2af29b71e370f37ee7b49a639fd5",
+      "sha256_normalized": "515d803ae75b1080c4994eb09b7c8e482edd2af29b71e370f37ee7b49a639fd5",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 1\n- **Already Enabled**: 0\n- **Gaps**: 1\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status | Frameworks |\n|---|---|---|---|---|---|---|---|\n| Delta Encrypt RDS Storage | arn:aws:controlcatalog:::control/ct-fixture-0004 | PREVENTIVE | HIGH | AWS::RDS::DBInstance | N/A | not enabled | CIS-AWS-Benchmark-v1.4.0: 2.3.1 |\n",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":\"CIS-AWS-Benchmark-v1.4.0,Not-A-Framework-v9,PCI-DSS-v4.0\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::S3::Bucket\"],\"severity_filter\":\"CRITICAL,HIGH,MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 647,
+      "sha256": "fcce5bf20621f658d510b8019e5012bb9bc2a3a82fabb13869a20675454fe405",
+      "sha256_normalized": "fcce5bf20621f658d510b8019e5012bb9bc2a3a82fabb13869a20675454fe405",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 2\n- **Already Enabled**: 0\n- **Gaps**: 2\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status | Frameworks |\n|---|---|---|---|---|---|---|---|\n| Beta Detect Public S3 Buckets | arn:aws:controlcatalog:::control/ct-fixture-0002 | DETECTIVE | HIGH | AWS::S3::Bucket | 333333333333 | not enabled | PCI-DSS-v4.0: 3.4.1 |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::S3::Bucket | 333333333333 | not enabled | PCI-DSS-v4.0: 8.3.1<br/>CIS-AWS-Benchmark-v1.4.0: 1.7 |\n",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":\"CIS-AWS-Benchmark-v1.4.0,Not-A-Framework-v9,PCI-DSS-v4.0\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::S3::Bucket\"],\"severity_filter\":\"CRITICAL,HIGH,MEDIUM,LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 647,
+      "sha256": "fcce5bf20621f658d510b8019e5012bb9bc2a3a82fabb13869a20675454fe405",
+      "sha256_normalized": "fcce5bf20621f658d510b8019e5012bb9bc2a3a82fabb13869a20675454fe405",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 2\n- **Already Enabled**: 0\n- **Gaps**: 2\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status | Frameworks |\n|---|---|---|---|---|---|---|---|\n| Beta Detect Public S3 Buckets | arn:aws:controlcatalog:::control/ct-fixture-0002 | DETECTIVE | HIGH | AWS::S3::Bucket | 333333333333 | not enabled | PCI-DSS-v4.0: 3.4.1 |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::S3::Bucket | 333333333333 | not enabled | PCI-DSS-v4.0: 8.3.1<br/>CIS-AWS-Benchmark-v1.4.0: 1.7 |\n",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":\"NIST-SP-800-53-r5,CIS-AWS-Benchmark-v1.4.0,Not-A-Framework-v9\",\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::DynamoDB::Table\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 167,
+      "sha256": "e25f29dafea48af0447100f8fed53327d1f6aa3daae218da73d34e11c764310d",
+      "sha256_normalized": "e25f29dafea48af0447100f8fed53327d1f6aa3daae218da73d34e11c764310d",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No controls matched the requested frameworks\"\n}",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":\"Not-A-Framework-v9,CIS-AWS-Benchmark-v1.4.0,NIST-SP-800-53-r5\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"CRITICAL,HIGH,MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 640,
+      "sha256": "d2e8275144a65ed6d9593e6f2d8702defeac9f7a895a6b684e18b419e6b8ab29",
+      "sha256_normalized": "d2e8275144a65ed6d9593e6f2d8702defeac9f7a895a6b684e18b419e6b8ab29",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 2\n- **Already Enabled**: 0\n- **Gaps**: 2\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status | Frameworks |\n|---|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::SecurityGroup | 111111111111 | not enabled | NIST-SP-800-53-r5: AC-2 |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::EC2::SecurityGroup | 111111111111 | not enabled | NIST-SP-800-53-r5: SC-7 |\n",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":\"Not-A-Framework-v9,CIS-AWS-Benchmark-v1.4.0,NIST-SP-800-53-r5\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::S3::Bucket\"],\"severity_filter\":\"CRITICAL,HIGH,MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 450,
+      "sha256": "1442ce49f11e8f20fada6d1dbc84fb970f9901b606ed6bd9c05b1e637048127e",
+      "sha256_normalized": "1442ce49f11e8f20fada6d1dbc84fb970f9901b606ed6bd9c05b1e637048127e",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 1\n- **Already Enabled**: 0\n- **Gaps**: 1\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status | Frameworks |\n|---|---|---|---|---|---|---|---|\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::S3::Bucket | 333333333333 | not enabled | CIS-AWS-Benchmark-v1.4.0: 1.7 |\n",
+      "stderr_lines": [
+        "Warning: Framework 'Not-A-Framework-v9' matched no control mappings; ignoring."
+      ],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":\"PCI-DSS-v4.0,NIST-SP-800-53-r5,CIS-AWS-Benchmark-v1.4.0\",\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::Lambda::Function\",\"AWS::S3::Bucket\",\"AWS::KMS::Key\",\"AWS::IAM::Role\",\"AWS::DynamoDB::Table\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::RDS::DBInstance\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 3327,
+      "sha256": "a65c9ee92c22079771699f5791feb96119040c0ec232e2441dd047fc75fe4ec9",
+      "sha256_normalized": "a65c9ee92c22079771699f5791feb96119040c0ec232e2441dd047fc75fe4ec9",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 6,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 6\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"1.2.3\"\n        },\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"AC-2\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"3.4.1\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"CIS-AWS-Benchmark-v1.4.0\",\n          \"item\": \"2.3.1\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"PCI-DSS-v4.0\",\n          \"item\": \"8.3.1\"\n        },\n        {\n          \"name\": \"CIS-AWS-Benchmark-v1.4.0\",\n          \"item\": \"1.7\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\",\n        \"444444444444\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"SC-7\"\n        }\n      ]\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": [\n        \"666666666666\"\n      ],\n      \"enablementStatus\": \"not enabled\",\n      \"frameworks\": [\n        {\n          \"name\": \"NIST-SP-800-53-r5\",\n          \"item\": \"SC-12\"\n        }\n      ]\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::DynamoDB::Table\"],\"severity_filter\":\"MEDIUM,LOW,HIGH\"}": {
+      "exit_code": 0,
+      "report_bytes": 149,
+      "sha256": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "sha256_normalized": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No matching controls found\"\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::DynamoDB::Table\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 149,
+      "sha256": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "sha256_normalized": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No matching controls found\"\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 915,
+      "sha256": "6cc1b9333565c2bfd35b2fb8a269c524fd407c7ca0af0c9e2a9ab9209df5a822",
+      "sha256_normalized": "6cc1b9333565c2bfd35b2fb8a269c524fd407c7ca0af0c9e2a9ab9209df5a822",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 2,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 2\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::Lambda::Function\"],\"severity_filter\":\"MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 902,
+      "sha256": "597bc825d5c6e757a9ca49aae5003253e120a281a26be81649c13938e69780e1",
+      "sha256_normalized": "597bc825d5c6e757a9ca49aae5003253e120a281a26be81649c13938e69780e1",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 2,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 2\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\"\n      ],\n      \"accounts\": [\n        \"222222222222\",\n        \"444444444444\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::RDS::DBInstance\",\"AWS::DynamoDB::Table\",\"AWS::EC2::SecurityGroup\",\"AWS::S3::Bucket\",\"AWS::IAM::Role\"],\"severity_filter\":\"HIGH\"}": {
+      "exit_code": 0,
+      "report_bytes": 1666,
+      "sha256": "20c8c8473c00e349842bf91787959c8412c2b2ded77884baeb8c14e5bc83c413",
+      "sha256_normalized": "20c8c8473c00e349842bf91787959c8412c2b2ded77884baeb8c14e5bc83c413",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 4,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 4\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 509,
+      "sha256": "3b2399e5981a6b2ebef7870c5639cb84eeb6a64e61199a489cc085df448e6707",
+      "sha256_normalized": "3b2399e5981a6b2ebef7870c5639cb84eeb6a64e61199a489cc085df448e6707",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::SecurityGroup\",\"AWS::S3::Bucket\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 1576,
+      "sha256": "be035ee529a22417bb97fbdde805728f1d2b6ce180e76e58338118ec259a48de",
+      "sha256_normalized": "be035ee529a22417bb97fbdde805728f1d2b6ce180e76e58338118ec259a48de",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 4,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 4\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::SecurityGroup\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 861,
+      "sha256": "0131f1ce9dc800d5093e09b5b8ecae3ca182d4804d66c165400f66e32536eea6",
+      "sha256_normalized": "0131f1ce9dc800d5093e09b5b8ecae3ca182d4804d66c165400f66e32536eea6",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 2,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 2\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::KMS::Key\",\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::DynamoDB::Table\",\"AWS::S3::Bucket\",\"AWS::RDS::DBInstance\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"HIGH\"}": {
+      "exit_code": 0,
+      "report_bytes": 1666,
+      "sha256": "20c8c8473c00e349842bf91787959c8412c2b2ded77884baeb8c14e5bc83c413",
+      "sha256_normalized": "20c8c8473c00e349842bf91787959c8412c2b2ded77884baeb8c14e5bc83c413",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 4,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 4\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::KMS::Key\",\"AWS::S3::Bucket\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::IAM::Role\",\"AWS::DynamoDB::Table\",\"AWS::Lambda::Function\",\"AWS::RDS::DBInstance\"],\"severity_filter\":\"HIGH\"}": {
+      "exit_code": 0,
+      "report_bytes": 1666,
+      "sha256": "20c8c8473c00e349842bf91787959c8412c2b2ded77884baeb8c14e5bc83c413",
+      "sha256_normalized": "20c8c8473c00e349842bf91787959c8412c2b2ded77884baeb8c14e5bc83c413",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 4,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 4\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::KMS::Key\",\"AWS::S3::Bucket\",\"AWS::IAM::Role\",\"AWS::DynamoDB::Table\",\"AWS::Lambda::Function\",\"AWS::RDS::DBInstance\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"HIGH\"}": {
+      "exit_code": 0,
+      "report_bytes": 1666,
+      "sha256": "20c8c8473c00e349842bf91787959c8412c2b2ded77884baeb8c14e5bc83c413",
+      "sha256_normalized": "20c8c8473c00e349842bf91787959c8412c2b2ded77884baeb8c14e5bc83c413",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 4,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 4\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::KMS::Key\",\"AWS::S3::Bucket\",\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::RDS::DBInstance\",\"AWS::DynamoDB::Table\",\"AWS::EC2::SecurityGroup\",\"AWS::Lambda::Function\"],\"severity_filter\":\"HIGH\"}": {
+      "exit_code": 0,
+      "report_bytes": 1666,
+      "sha256": "20c8c8473c00e349842bf91787959c8412c2b2ded77884baeb8c14e5bc83c413",
+      "sha256_normalized": "20c8c8473c00e349842bf91787959c8412c2b2ded77884baeb8c14e5bc83c413",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 4,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 4\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::Lambda::Function\",\"AWS::RDS::DBInstance\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::S3::Bucket\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 2824,
+      "sha256": "90ad4c4c5ee2099fb7fea6da507f1c56a4955afe94ab5a6040ca55d139c67c73",
+      "sha256_normalized": "90ad4c4c5ee2099fb7fea6da507f1c56a4955afe94ab5a6040ca55d139c67c73",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 7,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 7\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Epsilon Detect Wildcard IAM Policies\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0005\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"LOW\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": [\n        \"111111111111\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\",\n        \"444444444444\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": [\n        \"666666666666\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::Lambda::Function\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 520,
+      "sha256": "e5d697feb5733912cea6c62eaa4f431531ed69843495b7e54525413a064db762",
+      "sha256_normalized": "e5d697feb5733912cea6c62eaa4f431531ed69843495b7e54525413a064db762",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\"\n      ],\n      \"accounts\": [\n        \"222222222222\",\n        \"444444444444\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::S3::Bucket\",\"AWS::RDS::DBInstance\",\"AWS::EC2::Instance\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::EC2::SecurityGroup\",\"AWS::Lambda::Function\",\"AWS::DynamoDB::Table\"],\"severity_filter\":\"LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 2824,
+      "sha256": "90ad4c4c5ee2099fb7fea6da507f1c56a4955afe94ab5a6040ca55d139c67c73",
+      "sha256_normalized": "90ad4c4c5ee2099fb7fea6da507f1c56a4955afe94ab5a6040ca55d139c67c73",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 7,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 7\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Epsilon Detect Wildcard IAM Policies\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0005\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"LOW\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": [\n        \"111111111111\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\",\n        \"444444444444\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": [\n        \"666666666666\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::S3::Bucket\",\"AWS::RDS::DBInstance\",\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::DynamoDB::Table\"],\"severity_filter\":\"LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 2824,
+      "sha256": "90ad4c4c5ee2099fb7fea6da507f1c56a4955afe94ab5a6040ca55d139c67c73",
+      "sha256_normalized": "90ad4c4c5ee2099fb7fea6da507f1c56a4955afe94ab5a6040ca55d139c67c73",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 7,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 7\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": [\n        \"555555555555\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Epsilon Detect Wildcard IAM Policies\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0005\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"LOW\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": [\n        \"111111111111\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": [\n        \"111111111111\",\n        \"222222222222\",\n        \"444444444444\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": [\n        \"666666666666\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::S3::Bucket\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 842,
+      "sha256": "c8da7ee3fc66f0816200f1fbad674c9e5a9876e7a26cc1b15467792ed9260789",
+      "sha256_normalized": "c8da7ee3fc66f0816200f1fbad674c9e5a9876e7a26cc1b15467792ed9260789",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 2,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 2\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": [\n        \"333333333333\"\n      ],\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::DynamoDB::Table\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::S3::Bucket\",\"AWS::RDS::DBInstance\",\"AWS::IAM::Role\",\"AWS::Lambda::Function\",\"AWS::KMS::Key\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 1444,
+      "sha256": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "sha256_normalized": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 7\n- **Already Enabled**: 0\n- **Gaps**: 7\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance, AWS::EC2::SecurityGroup | 111111111111, 222222222222 | not enabled |\n| Beta Detect Public S3 Buckets | arn:aws:controlcatalog:::control/ct-fixture-0002 | DETECTIVE | HIGH | AWS::S3::Bucket | 333333333333 | not enabled |\n| Delta Encrypt RDS Storage | arn:aws:controlcatalog:::control/ct-fixture-0004 | PREVENTIVE | HIGH | AWS::RDS::DBInstance | 555555555555 | not enabled |\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | 111111111111 | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role, AWS::S3::Bucket | 111111111111, 333333333333 | not enabled |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function, AWS::EC2::SecurityGroup | 111111111111, 222222222222, 444444444444 | not enabled |\n| Zeta Rotate KMS Keys | arn:aws:controlcatalog:::control/ct-fixture-0006 | DETECTIVE | MEDIUM | AWS::KMS::Key | 666666666666 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::DynamoDB::Table\",\"AWS::EC2::Instance\",\"AWS::RDS::DBInstance\",\"AWS::EC2::SecurityGroup\",\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::S3::Bucket\",\"AWS::KMS::Key\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 1444,
+      "sha256": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "sha256_normalized": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 7\n- **Already Enabled**: 0\n- **Gaps**: 7\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance, AWS::EC2::SecurityGroup | 111111111111, 222222222222 | not enabled |\n| Beta Detect Public S3 Buckets | arn:aws:controlcatalog:::control/ct-fixture-0002 | DETECTIVE | HIGH | AWS::S3::Bucket | 333333333333 | not enabled |\n| Delta Encrypt RDS Storage | arn:aws:controlcatalog:::control/ct-fixture-0004 | PREVENTIVE | HIGH | AWS::RDS::DBInstance | 555555555555 | not enabled |\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | 111111111111 | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role, AWS::S3::Bucket | 111111111111, 333333333333 | not enabled |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function, AWS::EC2::SecurityGroup | 111111111111, 222222222222, 444444444444 | not enabled |\n| Zeta Rotate KMS Keys | arn:aws:controlcatalog:::control/ct-fixture-0006 | DETECTIVE | MEDIUM | AWS::KMS::Key | 666666666666 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::DynamoDB::Table\",\"AWS::EC2::SecurityGroup\",\"AWS::RDS::DBInstance\",\"AWS::EC2::Instance\",\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::S3::Bucket\",\"AWS::KMS::Key\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 1444,
+      "sha256": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "sha256_normalized": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 7\n- **Already Enabled**: 0\n- **Gaps**: 7\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance, AWS::EC2::SecurityGroup | 111111111111, 222222222222 | not enabled |\n| Beta Detect Public S3 Buckets | arn:aws:controlcatalog:::control/ct-fixture-0002 | DETECTIVE | HIGH | AWS::S3::Bucket | 333333333333 | not enabled |\n| Delta Encrypt RDS Storage | arn:aws:controlcatalog:::control/ct-fixture-0004 | PREVENTIVE | HIGH | AWS::RDS::DBInstance | 555555555555 | not enabled |\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | 111111111111 | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role, AWS::S3::Bucket | 111111111111, 333333333333 | not enabled |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function, AWS::EC2::SecurityGroup | 111111111111, 222222222222, 444444444444 | not enabled |\n| Zeta Rotate KMS Keys | arn:aws:controlcatalog:::control/ct-fixture-0006 | DETECTIVE | MEDIUM | AWS::KMS::Key | 666666666666 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::DynamoDB::Table\",\"AWS::RDS::DBInstance\",\"AWS::Lambda::Function\",\"AWS::EC2::Instance\",\"AWS::IAM::Role\",\"AWS::S3::Bucket\",\"AWS::EC2::SecurityGroup\",\"AWS::KMS::Key\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 1444,
+      "sha256": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "sha256_normalized": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 7\n- **Already Enabled**: 0\n- **Gaps**: 7\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance, AWS::EC2::SecurityGroup | 111111111111, 222222222222 | not enabled |\n| Beta Detect Public S3 Buckets | arn:aws:controlcatalog:::control/ct-fixture-0002 | DETECTIVE | HIGH | AWS::S3::Bucket | 333333333333 | not enabled |\n| Delta Encrypt RDS Storage | arn:aws:controlcatalog:::control/ct-fixture-0004 | PREVENTIVE | HIGH | AWS::RDS::DBInstance | 555555555555 | not enabled |\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | 111111111111 | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role, AWS::S3::Bucket | 111111111111, 333333333333 | not enabled |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function, AWS::EC2::SecurityGroup | 111111111111, 222222222222, 444444444444 | not enabled |\n| Zeta Rotate KMS Keys | arn:aws:controlcatalog:::control/ct-fixture-0006 | DETECTIVE | MEDIUM | AWS::KMS::Key | 666666666666 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::DynamoDB::Table\",\"AWS::RDS::DBInstance\",\"AWS::Lambda::Function\",\"AWS::EC2::Instance\",\"AWS::S3::Bucket\",\"AWS::IAM::Role\",\"AWS::EC2::SecurityGroup\",\"AWS::KMS::Key\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 1444,
+      "sha256": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "sha256_normalized": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 7\n- **Already Enabled**: 0\n- **Gaps**: 7\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance, AWS::EC2::SecurityGroup | 111111111111, 222222222222 | not enabled |\n| Beta Detect Public S3 Buckets | arn:aws:controlcatalog:::control/ct-fixture-0002 | DETECTIVE | HIGH | AWS::S3::Bucket | 333333333333 | not enabled |\n| Delta Encrypt RDS Storage | arn:aws:controlcatalog:::control/ct-fixture-0004 | PREVENTIVE | HIGH | AWS::RDS::DBInstance | 555555555555 | not enabled |\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | 111111111111 | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role, AWS::S3::Bucket | 111111111111, 333333333333 | not enabled |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function, AWS::EC2::SecurityGroup | 111111111111, 222222222222, 444444444444 | not enabled |\n| Zeta Rotate KMS Keys | arn:aws:controlcatalog:::control/ct-fixture-0006 | DETECTIVE | MEDIUM | AWS::KMS::Key | 666666666666 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::EC2::SecurityGroup\",\"AWS::Lambda::Function\",\"AWS::DynamoDB::Table\",\"AWS::RDS::DBInstance\",\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::S3::Bucket\",\"AWS::KMS::Key\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 1444,
+      "sha256": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "sha256_normalized": "53943983422fcaa4b62ce92eab0e9daae804cdb699f886dc69a91203a549c08f",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 7\n- **Already Enabled**: 0\n- **Gaps**: 7\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance, AWS::EC2::SecurityGroup | 111111111111, 222222222222 | not enabled |\n| Beta Detect Public S3 Buckets | arn:aws:controlcatalog:::control/ct-fixture-0002 | DETECTIVE | HIGH | AWS::S3::Bucket | 333333333333 | not enabled |\n| Delta Encrypt RDS Storage | arn:aws:controlcatalog:::control/ct-fixture-0004 | PREVENTIVE | HIGH | AWS::RDS::DBInstance | 555555555555 | not enabled |\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | 111111111111 | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role, AWS::S3::Bucket | 111111111111, 333333333333 | not enabled |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function, AWS::EC2::SecurityGroup | 111111111111, 222222222222, 444444444444 | not enabled |\n| Zeta Rotate KMS Keys | arn:aws:controlcatalog:::control/ct-fixture-0006 | DETECTIVE | MEDIUM | AWS::KMS::Key | 666666666666 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"CRITICAL,HIGH,MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 571,
+      "sha256": "22ecf663acf9f196d5f8a5d9427822332305172297b1c0e6e7b412aa86d98803",
+      "sha256_normalized": "22ecf663acf9f196d5f8a5d9427822332305172297b1c0e6e7b412aa86d98803",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 2\n- **Already Enabled**: 0\n- **Gaps**: 2\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::SecurityGroup | 111111111111 | not enabled |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::EC2::SecurityGroup | 111111111111 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"CRITICAL,HIGH,MEDIUM,LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 571,
+      "sha256": "22ecf663acf9f196d5f8a5d9427822332305172297b1c0e6e7b412aa86d98803",
+      "sha256_normalized": "22ecf663acf9f196d5f8a5d9427822332305172297b1c0e6e7b412aa86d98803",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 2\n- **Already Enabled**: 0\n- **Gaps**: 2\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::SecurityGroup | 111111111111 | not enabled |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::EC2::SecurityGroup | 111111111111 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::IAM::Role\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 556,
+      "sha256": "93f1d8d64a5f617a98a0b122d0e2827506bf882c67549767d9c44ec44cbfbc20",
+      "sha256_normalized": "93f1d8d64a5f617a98a0b122d0e2827506bf882c67549767d9c44ec44cbfbc20",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 2\n- **Already Enabled**: 0\n- **Gaps**: 2\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | 111111111111 | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role | 111111111111 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"aggregator\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::Lambda::Function\",\"AWS::IAM::Role\",\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 967,
+      "sha256": "b0ce64ee48991693747c6558ed7102fd63693b70c39bee1d1d7285bc750adc94",
+      "sha256_normalized": "b0ce64ee48991693747c6558ed7102fd63693b70c39bee1d1d7285bc750adc94",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 4\n- **Already Enabled**: 0\n- **Gaps**: 4\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance, AWS::EC2::SecurityGroup | 111111111111, 222222222222 | not enabled |\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | 111111111111 | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role | 111111111111 | not enabled |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function, AWS::EC2::SecurityGroup | 111111111111, 222222222222, 444444444444 | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"array\",\"mode\":\"interactive-empty-ou\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::S3::Bucket\",\"AWS::Lambda::Function\",\"AWS::RDS::DBInstance\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 2532,
+      "sha256": "2337ecd562edfe2f2c641b0257bfd8391d77ee54b83b94ec01d4e846af93315e",
+      "sha256_normalized": "2337ecd562edfe2f2c641b0257bfd8391d77ee54b83b94ec01d4e846af93315e",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 7,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 7\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Epsilon Detect Wildcard IAM Policies\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0005\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"LOW\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::S3::Bucket\",\"AWS::Lambda::Function\",\"AWS::RDS::DBInstance\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 2532,
+      "sha256": "2337ecd562edfe2f2c641b0257bfd8391d77ee54b83b94ec01d4e846af93315e",
+      "sha256_normalized": "2337ecd562edfe2f2c641b0257bfd8391d77ee54b83b94ec01d4e846af93315e",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 7,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 7\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Beta Detect Public S3 Buckets\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0002\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Delta Encrypt RDS Storage\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0004\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"HIGH\",\n      \"matchedResourceTypes\": [\n        \"AWS::RDS::DBInstance\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Epsilon Detect Wildcard IAM Policies\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0005\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"LOW\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\",\n        \"AWS::S3::Bucket\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::IAM::Role\",\"AWS::RDS::DBInstance\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"CRITICAL,LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 1155,
+      "sha256": "1e7365008c80960e1940a0f527749c1499eaf7278bf95d8aaec9664766872f2d",
+      "sha256_normalized": "1e7365008c80960e1940a0f527749c1499eaf7278bf95d8aaec9664766872f2d",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 3,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 3\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\",\n        \"AWS::EC2::SecurityGroup\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Epsilon Detect Wildcard IAM Policies\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0005\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"LOW\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::IAM::Role\",\"AWS::RDS::DBInstance\",\"AWS::Lambda::Function\"],\"severity_filter\":\"CRITICAL,LOW\"}": {
+      "exit_code": 0,
+      "report_bytes": 1120,
+      "sha256": "d1fd4af10cf84da91079ef3425bf1a87142d15575134e77446637779bdfc977c",
+      "sha256_normalized": "d1fd4af10cf84da91079ef3425bf1a87142d15575134e77446637779bdfc977c",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 3,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 3\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Epsilon Detect Wildcard IAM Policies\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0005\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"LOW\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Eta Restrict Root User Access\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0007\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::IAM::Role\",\"AWS::RDS::DBInstance\",\"AWS::Lambda::Function\"],\"severity_filter\":\"LOW,MEDIUM\"}": {
+      "exit_code": 0,
+      "report_bytes": 800,
+      "sha256": "628647b8e89751ebebb8605ed95f1ba679c8be1900b9559453166ba603d6913a",
+      "sha256_normalized": "628647b8e89751ebebb8605ed95f1ba679c8be1900b9559453166ba603d6913a",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 2,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 2\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Epsilon Detect Wildcard IAM Policies\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0005\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"LOW\",\n      \"matchedResourceTypes\": [\n        \"AWS::IAM::Role\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    },\n    {\n      \"controlName\": \"Gamma Require Lambda VPC Attachment\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0003\",\n      \"behavior\": \"PROACTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::Lambda::Function\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::EC2::Instance\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 457,
+      "sha256": "348a0ed06613d8b636e1b6459265b2e209c5260c9d55d2096905d98317672953",
+      "sha256_normalized": "348a0ed06613d8b636e1b6459265b2e209c5260c9d55d2096905d98317672953",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Alpha Enforce EC2 IMDSv2\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0001\",\n      \"behavior\": \"PREVENTIVE\",\n      \"severity\": \"CRITICAL\",\n      \"matchedResourceTypes\": [\n        \"AWS::EC2::Instance\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::KMS::Key\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 445,
+      "sha256": "a1330f8c88d834d8b79226eb56c1b1484176743c19629574f417fe5d1e38f137",
+      "sha256_normalized": "a1330f8c88d834d8b79226eb56c1b1484176743c19629574f417fe5d1e38f137",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 1,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 1\n  },\n  \"controls\": [\n    {\n      \"controlName\": \"Zeta Rotate KMS Keys\",\n      \"controlArn\": \"arn:aws:controlcatalog:::control/ct-fixture-0006\",\n      \"behavior\": \"DETECTIVE\",\n      \"severity\": \"MEDIUM\",\n      \"matchedResourceTypes\": [\n        \"AWS::KMS::Key\"\n      ],\n      \"accounts\": null,\n      \"enablementStatus\": \"not enabled\"\n    }\n  ],\n  \"message\": null\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"json\",\"resource_types\":[\"AWS::Lambda::Function\"],\"severity_filter\":\"HIGH\"}": {
+      "exit_code": 0,
+      "report_bytes": 149,
+      "sha256": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "sha256_normalized": "5715a83bc52b4e8fd9b590c4b131c76f9ae99357cb28bf8519acf622355097ff",
+      "report": "{\n  \"summary\": {\n    \"totalRecommended\": 0,\n    \"alreadyEnabled\": 0,\n    \"gaps\": 0\n  },\n  \"controls\": [],\n  \"message\": \"No matching controls found\"\n}",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::DynamoDB::Table\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 139,
+      "sha256": "cc33d5fa664ffb17c562942e9a01353559a44346842b86398210cd6fb3c0f403",
+      "sha256_normalized": "cc33d5fa664ffb17c562942e9a01353559a44346842b86398210cd6fb3c0f403",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 0\n- **Already Enabled**: 0\n- **Gaps**: 0\n\nNo matching controls found\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::EC2::Instance\",\"AWS::EC2::SecurityGroup\",\"AWS::S3::Bucket\",\"AWS::Lambda::Function\",\"AWS::RDS::DBInstance\",\"AWS::IAM::Role\",\"AWS::KMS::Key\",\"AWS::DynamoDB::Table\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 1325,
+      "sha256": "a1c70389817eeeb2af97fbc3f95b45467c266684f6ed47a1442a3b6718e76f64",
+      "sha256_normalized": "a1c70389817eeeb2af97fbc3f95b45467c266684f6ed47a1442a3b6718e76f64",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 7\n- **Already Enabled**: 0\n- **Gaps**: 7\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance, AWS::EC2::SecurityGroup | N/A | not enabled |\n| Beta Detect Public S3 Buckets | arn:aws:controlcatalog:::control/ct-fixture-0002 | DETECTIVE | HIGH | AWS::S3::Bucket | N/A | not enabled |\n| Delta Encrypt RDS Storage | arn:aws:controlcatalog:::control/ct-fixture-0004 | PREVENTIVE | HIGH | AWS::RDS::DBInstance | N/A | not enabled |\n| Epsilon Detect Wildcard IAM Policies | arn:aws:controlcatalog:::control/ct-fixture-0005 | DETECTIVE | LOW | AWS::IAM::Role | N/A | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role, AWS::S3::Bucket | N/A | not enabled |\n| Gamma Require Lambda VPC Attachment | arn:aws:controlcatalog:::control/ct-fixture-0003 | PROACTIVE | MEDIUM | AWS::Lambda::Function, AWS::EC2::SecurityGroup | N/A | not enabled |\n| Zeta Rotate KMS Keys | arn:aws:controlcatalog:::control/ct-fixture-0006 | DETECTIVE | MEDIUM | AWS::KMS::Key | N/A | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::EC2::Instance\"],\"severity_filter\":null}": {
+      "exit_code": 0,
+      "report_bytes": 390,
+      "sha256": "b5de0d7079badedab391661d4b1402d51459c0ac28dd2a35e35e6c2949edd57e",
+      "sha256_normalized": "b5de0d7079badedab391661d4b1402d51459c0ac28dd2a35e35e6c2949edd57e",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 1\n- **Already Enabled**: 0\n- **Gaps**: 1\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance | N/A | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::RDS::DBInstance\",\"AWS::EC2::Instance\",\"AWS::DynamoDB::Table\",\"AWS::KMS::Key\",\"AWS::IAM::Role\",\"AWS::EC2::SecurityGroup\"],\"severity_filter\":\"CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 561,
+      "sha256": "b05110fb3823294cd7778b9db79cfe9e17d09ecffedeaa5b1a934288133a580e",
+      "sha256_normalized": "b05110fb3823294cd7778b9db79cfe9e17d09ecffedeaa5b1a934288133a580e",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 2\n- **Already Enabled**: 0\n- **Gaps**: 2\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Alpha Enforce EC2 IMDSv2 | arn:aws:controlcatalog:::control/ct-fixture-0001 | PREVENTIVE | CRITICAL | AWS::EC2::Instance, AWS::EC2::SecurityGroup | N/A | not enabled |\n| Eta Restrict Root User Access | arn:aws:controlcatalog:::control/ct-fixture-0007 | PREVENTIVE | CRITICAL | AWS::IAM::Role | N/A | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    },
+    "{\"behavior_filter\":null,\"framework\":null,\"input_format\":\"array\",\"mode\":\"non-interactive\",\"output_format\":\"markdown\",\"resource_types\":[\"AWS::RDS::DBInstance\"],\"severity_filter\":\"HIGH,LOW,CRITICAL\"}": {
+      "exit_code": 0,
+      "report_bytes": 389,
+      "sha256": "75987944f6fc0cb5bdf547a8445312bcb8abd2bea5d8ae6a9d91e78e147fd370",
+      "sha256_normalized": "75987944f6fc0cb5bdf547a8445312bcb8abd2bea5d8ae6a9d91e78e147fd370",
+      "report": "# Control Tower Controls Report\n\n## Summary\n\n- **Total Recommended**: 1\n- **Already Enabled**: 0\n- **Gaps**: 1\n\n## Controls\n\n| Control Name | ARN | Behavior | Severity | Matched Resource Types | Accounts | Status |\n|---|---|---|---|---|---|---|\n| Delta Encrypt RDS Storage | arn:aws:controlcatalog:::control/ct-fixture-0004 | PREVENTIVE | HIGH | AWS::RDS::DBInstance | N/A | not enabled |\n",
+      "stderr_lines": [],
+      "enabled_controls_retriever_called": false,
+      "aws_clients_constructed": []
+    }
+  },
+  "other_exit_codes": {
+    "{\"detail\":\"AccessDeniedException\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 3,
+      "stderr_marker": "Authentication error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"AuthFailure\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 3,
+      "stderr_marker": "Authentication error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"ConnectTimeoutError\",\"failure\":\"catalog_connection_error\"}": {
+      "exit_code": 2,
+      "stderr_marker": "API error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"EndpointConnectionError\",\"failure\":\"catalog_connection_error\"}": {
+      "exit_code": 2,
+      "stderr_marker": "API error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"ExpiredToken\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 3,
+      "stderr_marker": "Authentication error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"ExpiredTokenException\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 3,
+      "stderr_marker": "Authentication error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"IncompleteSignature\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 3,
+      "stderr_marker": "Authentication error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"InternalServerException\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 2,
+      "stderr_marker": "API error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"InvalidClientTokenId\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 3,
+      "stderr_marker": "Authentication error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"InvalidIdentityToken\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 3,
+      "stderr_marker": "Authentication error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"InvalidSignatureException\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 3,
+      "stderr_marker": "Authentication error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"MissingAuthenticationToken\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 3,
+      "stderr_marker": "Authentication error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"NoCredentialsError\",\"failure\":\"catalog_connection_error\"}": {
+      "exit_code": 3,
+      "stderr_marker": "Authentication error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"ResourceNotFoundException\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 2,
+      "stderr_marker": "API error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"ServiceQuotaExceededException\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 2,
+      "stderr_marker": "API error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"SignatureDoesNotMatch\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 3,
+      "stderr_marker": "Authentication error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"ThrottlingException\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 2,
+      "stderr_marker": "API error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"UnauthorizedAccess\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 3,
+      "stderr_marker": "Authentication error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"ValidationException\",\"failure\":\"catalog_client_error\"}": {
+      "exit_code": 2,
+      "stderr_marker": "API error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"empty_array\",\"failure\":\"input\"}": {
+      "exit_code": 1,
+      "stderr_marker": "Error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"invalid_json\",\"failure\":\"input\"}": {
+      "exit_code": 1,
+      "stderr_marker": "Error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"missing_input_file\",\"failure\":\"input\"}": {
+      "exit_code": 1,
+      "stderr_marker": "Error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"no_input_file_flag\",\"failure\":\"input\"}": {
+      "exit_code": 1,
+      "stderr_marker": "Error",
+      "output_file_created": false
+    },
+    "{\"detail\":\"unsupported_shape\",\"failure\":\"input\"}": {
+      "exit_code": 1,
+      "stderr_marker": "Error",
+      "output_file_created": false
+    }
+  }
+}
