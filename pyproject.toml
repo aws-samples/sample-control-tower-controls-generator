@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "control-tower-controls-generator"
+version = "0.1.0"
+description = "CLI tool for mapping resource types to AWS Control Tower controls"
+requires-python = ">=3.11"
+dependencies = [
+    # boto3 1.38.35 adds Control Catalog ListControlMappings + GovernedResources (required by this tool)
+    "boto3>=1.38.35",
+    "click>=8.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "hypothesis>=6.100.0",
+    "pytest-cov>=5.0.0",
+    "moto>=5.0.0",
+]
+
+[project.scripts]
+control-tower-controls-generator = "control_tower_controls_generator.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["control_tower_controls_generator"]
+
+[tool.coverage.report]
+show_missing = true
